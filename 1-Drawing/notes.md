@@ -1,7 +1,10 @@
-# 1.0 Drawing with p5.js
+# 1 Drawing with p5.js
 
-[Shapes](###-shapes)
-[Color](###-color)
+Contents:
+* [Shapes](#-shapes)
+* [Color](#-color)
+* [Other Resources](#-resources)
+
 ---
 
 [p5.js](https://p5js.org/reference/) is an easy-to-learn Javascript library designed to make drawing, animations, games, interactive art, and more!
@@ -26,7 +29,7 @@ function draw() {
 
 `ellipse()` takes 3 arguments, or numbers, inside the parenthesis. These represent x, y, and diameter (if you give it a fourth argument you will specify the width and height of the ellipse). You can read more about the ellipse function [here](https://p5js.org/reference/#/p5/ellipse).
 
-Check out the [p5.js reference] (https://p5js.org/reference/) for information about drawing other shapes such as `rect()` `line()` and `triangle()`
+Check out the [p5.js reference](https://p5js.org/reference/) for information about drawing other shapes such as `rect()` `line()` and `triangle()`
 
 ### Color
 Color in digital spaces can be defined by combining a red, green, and blue values (a RGB color space). In p5.js, we specify values in the range 0-255.
@@ -57,11 +60,11 @@ function draw() {
 }
 ```
 
-![blue ellipse](/assets/blueellipse.png)
+![blue ellipse](../assets/blueellipse.png)
 
 Likewise, to remove fill or stroke we use `noFill()` and `noStroke()`
 
-## Resources
+## Other Resources
 1. [p5.js reference page]((https://p5js.org/reference/))
 2. Dan's Video on [shapes and drawing](https://www.youtube.com/watch?v=c3TeLi6Ns1E&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=5)
 3. Dan's Video on [color](https://www.youtube.com/watch?v=riiJTF5-N7c&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=6)
