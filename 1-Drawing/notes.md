@@ -1,9 +1,9 @@
 # 1 Drawing with p5.js
 
 Contents:
-* [Shapes](#-shapes)
-* [Color](#-color)
-* [Other Resources](#-resources)
+* [Shapes](#shapes)
+* [Color](#color)
+* [Other Resources](#resources)
 
 ---
 
