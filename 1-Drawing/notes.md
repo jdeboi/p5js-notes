@@ -36,9 +36,7 @@ ellipse(100, 100, 50, 30);
 
 ![ellipse](assets/ellipse1.png)
 
-You can read more about the ellipse function [here](https://p5js.org/reference/#/p5/ellipse).
-
-Check out the [p5.js reference](https://p5js.org/reference/) for information about drawing other shapes such as: 
+You can read more about the ellipse function [here](https://p5js.org/reference/#/p5/ellipse). Check out the [p5.js reference](https://p5js.org/reference/) for information about drawing other shapes such as: 
 * `rect()` 
 * `line()`
 * `triangle()`
