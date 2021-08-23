@@ -1,5 +1,8 @@
+# 1. Drawing with p5.js
+[p5.js](https://p5js.org/reference/) is an easy-to-learn Javascript library designed to make drawing, animations, games, interactive art, and more!
+
+---
 Contents:
-- [1. Drawing with p5.js](#1-drawing-with-p5js)
   - [Shapes](#shapes)
   - [Color](#color)
     - [fill() & stroke()](#fill--stroke)
@@ -7,8 +10,6 @@ Contents:
 
 ---
 
-# 1. Drawing with p5.js
-[p5.js](https://p5js.org/reference/) is an easy-to-learn Javascript library designed to make drawing, animations, games, interactive art, and more!
 
 We will be editing the **script.js** file. Each script file will have a `setup()` (run one time) and a `draw()` (code that is run continuously as long as the programming is running).
 
@@ -96,6 +97,6 @@ function draw() {
 
 
 ## Other Resources
-1. [p5.js reference page]((https://p5js.org/reference/))
+1. [p5.js reference page](https://p5js.org/reference/)
 2. Dan's Video on [shapes and drawing](https://www.youtube.com/watch?v=c3TeLi6Ns1E&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=5)
 3. Dan's Video on [color](https://www.youtube.com/watch?v=riiJTF5-N7c&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=6)
