@@ -1,5 +1,6 @@
 # 0. Getting Started
 
+Contents:
 * [Repl.it]("#files")
 * [console.log()]("#console.log()")
 * [comments]("#comments")
@@ -9,8 +10,7 @@
 ## Repl.it
 Repl.it will be the platform we use to do assignments, collaborate on projects, and much more! Open the pane on the left-hand side to see project files:  
 
-1. **instructions.md**: I will put **assignment instructions** *in markdown*, so start each assignment by checking the **instructions.md** page (under files on the left-side. panel). 
-
+1. **instructions.md**: I will put **assignment instructions** *in markdown*, so start each assignment by checking the **instructions.md** page (under files on the left-side. panel).   
 Note: this file (like *instructions.md*) is a **markdown** file (.md file extension). Markdown has its own syntax and is used by programmers to create text-based instructions, tutorials, and other notes. If you're curious about it, read more [here](https://www.markdownguide.org/basic-syntax/)!
 
 2. **script.js**: where we will write code (JavaScript)

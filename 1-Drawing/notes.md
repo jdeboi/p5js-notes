@@ -1,4 +1,4 @@
-# 1 Drawing with p5.js
+# 1. Drawing with p5.js
 
 Contents:
 * [Shapes](#shapes)
@@ -26,10 +26,22 @@ function draw() {
   ellipse(100, 100, 50);
 }
 ```
+![ellipse](assets/ellipse0.png)
 
-`ellipse()` takes 3 arguments, or numbers, inside the parenthesis. These represent x, y, and diameter (if you give it a fourth argument you will specify the width and height of the ellipse). You can read more about the ellipse function [here](https://p5js.org/reference/#/p5/ellipse).
+`ellipse()` takes 3 arguments, or numbers, inside the parenthesis. These represent x, y, and diameter (if you give it a fourth argument you will specify the width and height of the ellipse). 
 
-Check out the [p5.js reference](https://p5js.org/reference/) for information about drawing other shapes such as `rect()` `line()` and `triangle()`
+```javascript
+ellipse(100, 100, 50, 30);
+```
+
+![ellipse](assets/ellipse1.png)
+
+You can read more about the ellipse function [here](https://p5js.org/reference/#/p5/ellipse).
+
+Check out the [p5.js reference](https://p5js.org/reference/) for information about drawing other shapes such as: 
+* `rect()` 
+* `line()`
+* `triangle()`
 
 ### Color
 Color in digital spaces can be defined by combining a red, green, and blue values (a RGB color space). In p5.js, we specify values in the range 0-255.
@@ -47,6 +59,8 @@ background(0, 0, 255);
 
 Check out **[this color picker](https://g.co/kgs/SN5wSS)** to find the RGB values of any color.
 
+![color picker](assets/colorpicker.png)
+
 To specify the color of a shape, we call `fill()` before the shape. `stroke()` sets the outline color and `strokeWeight()` sets the width of the outline:
 
 ```javascript
@@ -60,9 +74,24 @@ function draw() {
 }
 ```
 
-![blue ellipse](../assets/blueellipse.png)
+![ellipse](assets/ellipse2.png)
 
 Likewise, to remove fill or stroke we use `noFill()` and `noStroke()`
+
+```javascript
+function draw() {
+  background(200);
+
+  // removing stroke
+  noStroke();
+
+  fill(0, 255, 255);
+  ellipse(100, 100, 50);
+}
+```
+
+![ellipse](assets/ellipse3.png)
+
 
 ## Other Resources
 1. [p5.js reference page]((https://p5js.org/reference/))
