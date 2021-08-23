@@ -1,9 +1,11 @@
 # 1. Drawing with p5.js
 
 Contents:
-* [Shapes](#shapes)
-* [Color](#color)
-* [Other Resources](#resources)
+- [1. Drawing with p5.js](#1-drawing-with-p5js)
+    - [Shapes](#shapes)
+    - [Color](#color)
+    - [fill() & stroke()](#fill--stroke)
+  - [Other Resources](#other-resources)
 
 ---
 
@@ -59,6 +61,7 @@ Check out **[this color picker](https://g.co/kgs/SN5wSS)** to find the RGB value
 
 ![color picker](assets/colorpicker.png)
 
+### fill() & stroke()
 To specify the color of a shape, we call `fill()` before the shape. `stroke()` sets the outline color and `strokeWeight()` sets the width of the outline:
 
 ```javascript
