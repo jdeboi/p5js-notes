@@ -39,8 +39,8 @@ For now, we will focus on `let`. We can *declare* (and *initialize*) variables a
 
 ```javascript
 // declaring & initializing x and y at the top of our sketch
-const x = 100;
-const y = 50;
+let x = 100;
+let y = 50;
 
 function setup() {
   createCanvas(400, 400);
@@ -48,7 +48,6 @@ function setup() {
 
 function draw() {
   background(200);
-  
   ellipse(x, y, 50);
 }
 ```
@@ -76,7 +75,7 @@ function draw() {
 **Key Reflection Question:** why use variables??
 
 ## Initializing Variables
-Note: We don't always have to *initialize* the variable immediately when we declare it, the exception being variables defined with `const`. Variables that store colors (colors are technically the "object" data type), for example, must be initialized in the setup() or draw(). For example:
+We don't always have to *initialize* the variable immediately when we declare it (unless we used `const`). Variables that store colors (colors are technically the "object" data type), for example, must be initialized in the `setup()` or `draw()`. For example:
 
 ```javascript
 // declaring color variables
@@ -104,17 +103,15 @@ function draw() {
 * `NaN` (not a number) if we try to compute a value with it
 * throw an error in the console if we try to pass it to a function like `rect()`
 
-See what happens in the console if you run the following code:
-
 ```javascript
 let x;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(400, 400);
   
-  console.log(x);
-  console.log(x+2);
-  rect(x, 10, 10, 10);
+  console.log(x);       // undefined
+  console.log(x + 2);   // NaN
+  rect(x, 10, 10, 10);  // throws an error
 }
 ```
 
@@ -137,6 +134,20 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 }
 ```
+
+`width` and `height` come in handy when we want to write programs that respond to the canvas size. For example, to perfectly center an ellipse:
+
+```javascript
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+}
+
+function draw() {
+    background(0, 100, 100);
+    ellipse(width/2, height/2, 50);
+}
+```
+![center ellipse](assets/ellipsecenter.png)
 
 We can create a paintbrush using `mouseX` and `mouseY`. Make note of the `background()`'s second argument. Colors in p5.js can be provided an alpha value (transparency). See the [color reference](https://p5js.org/reference/#/p5/color).
 
