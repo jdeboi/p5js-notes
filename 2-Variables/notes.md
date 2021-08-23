@@ -27,9 +27,7 @@ Data types describe the type of data that we are storing in a variable. In JavaS
 4. **Null**: the *intentional* absence of a value
 5. **Undefined**: when variables lack a value
 
-Don't worry about the following data types for now:  
-6. **Symbol**
-7. **Object**
+Don't worry about the following data types for now: **Symbol**, **Object**
 
 ## Declaring Variables
 There are three ways to *declare* variables in JavaScript. 
