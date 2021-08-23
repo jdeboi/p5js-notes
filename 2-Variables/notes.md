@@ -2,7 +2,6 @@
 
 **Variables** in computer science are named entities that serve as placeholders for stored values. Variables can store all sorts of things: numbers, words, and more!
 
-Contents
   - [Data Types](#data-types)
   - [Declaring Variables](#declaring-variables)
   - [Initializing Variables](#initializing-variables)
@@ -200,7 +199,7 @@ function draw() {
 }
 ```
 
-**If you forget to declare** the variable with let, var, or const, it will be *hoisted* to a global scope:
+**If you forget to declare** the variable with `let`, `var`, or `const`, it will be *hoisted* to a global scope:
 
 ```javascript
 function setup() {
@@ -230,9 +229,9 @@ function setup() {
 }
 ```
 
-`let` and `const` have block scope, meaning the variable only exists between `{}`, whereas variables defined with `var` have function scope, meaning they can be accessed anywhere inside the function in which they were declared.
+`let` and `const` have block scope, meaning the variable only exists between `{}`, whereas variables defined with `var` have function scope, meaning they can be accessed anywhere inside the function in which they were declared (i.e. the `setup()` function).
 
-In this class we will use `let` and `const` almost exclusively.
+In this course we will use `let` and `const` almost exclusively.
 
 ## Mathematical Operators
 Operators let us change or assign values to variables. You should know the following operators.
@@ -249,7 +248,7 @@ Operators let us change or assign values to variables. You should know the follo
 Examples:
 ```javascript
 let x = 10;
-x++
+x++;
 console.log(x);     // 11
 
 let y = 5;
@@ -257,7 +256,7 @@ console.log(y % 2); // 1 (remainder of 5 after dividing by 2 is 1)
 ```
 
 ### Assignment Operators
-The following example showcases one difference between computer science variables from variables you might encounter in math classes:
+The following example showcases one *difference between computer science* variables from variables you might encounter in *math* classes:
 
 ```javascript
 let x = 10;
