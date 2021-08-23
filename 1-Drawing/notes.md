@@ -1,19 +1,18 @@
-# 1. Drawing with p5.js
-
 Contents:
 - [1. Drawing with p5.js](#1-drawing-with-p5js)
-    - [Shapes](#shapes)
-    - [Color](#color)
+  - [Shapes](#shapes)
+  - [Color](#color)
     - [fill() & stroke()](#fill--stroke)
   - [Other Resources](#other-resources)
 
 ---
 
+# 1. Drawing with p5.js
 [p5.js](https://p5js.org/reference/) is an easy-to-learn Javascript library designed to make drawing, animations, games, interactive art, and more!
 
 We will be editing the **script.js** file. Each script file will have a `setup()` (run one time) and a `draw()` (code that is run continuously as long as the programming is running).
 
-### Shapes
+## Shapes
 
 Let's start by drawing an ellipse to the screen:
 
@@ -25,6 +24,7 @@ function setup() {
 function draw() {
   background(200);
 
+  // x, y, diameter
   ellipse(100, 100, 50);
 }
 ```
@@ -33,6 +33,7 @@ function draw() {
 `ellipse()` takes 3 arguments, or numbers, inside the parenthesis. These represent x, y, and diameter (if you give it a fourth argument you will specify the width and height of the ellipse). 
 
 ```javascript
+// x, y, w, h
 ellipse(100, 100, 50, 30);
 ```
 
@@ -43,7 +44,7 @@ You can read more about the ellipse function [here](https://p5js.org/reference/#
 * `line()`
 * `triangle()`
 
-### Color
+## Color
 Color in digital spaces can be defined by combining a red, green, and blue values (a RGB color space). In p5.js, we specify values in the range 0-255.
 
 For example, to make the background **red**:
@@ -59,7 +60,7 @@ background(0, 0, 255);
 
 Check out **[this color picker](https://g.co/kgs/SN5wSS)** to find the RGB values of any color.
 
-![color picker](assets/colorpicker.png)
+![color picker](assets/colorpickers.png)
 
 ### fill() & stroke()
 To specify the color of a shape, we call `fill()` before the shape. `stroke()` sets the outline color and `strokeWeight()` sets the width of the outline:
