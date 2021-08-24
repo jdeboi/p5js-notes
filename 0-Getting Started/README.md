@@ -1,9 +1,8 @@
 # 0. Getting Started
 
-Contents:
-* [Repl.it]("#files")
-* [console.log()]("#console.log()")
-* [comments]("#comments")
+- [Repl.it]("#files")
+- [console.log()]("#console.log()")
+- [comments]("#comments")
 
 ---
 
