@@ -1,13 +1,12 @@
 # 4. Conditionals
 
-  - [- Resources](#--resources)
   - [if / else](#if--else)
   - [if / else if / else](#if--else-if--else)
   - [Comparison Operators](#comparison-operators)
   - [Logical Operators](#logical-operators)
   - [Booleans](#booleans)
     - [mouseIsPressed](#mouseispressed)
-  - [keyPressed() & mousePressed](#keypressed)
+  - [keyPressed()](#keypressed)
   - [Resources](#resources)
 ---
 
@@ -155,17 +154,34 @@ function draw() {
 }
 ```
 
-## keyPressed() & mousePressed()
-p5.js has other functions (besides the `draw()` and `setup()`) that are called automatically. 
+Be careful not to confuse the boolean, `mouseIsPressed`, with the function, `mousePressed()`, which is called automatically when the mouse is pressed.
 
-`keyPressed()` is called automatically when a key is pressed. We can use this function with conditional statements to add interactivity to our sketches:
+```javascript
+function mousePressed() {
+   console.log(mouseX, mouseY);
+}
+```
+
+## keyPressed()
+p5.js has other functions (besides the `draw()`, `setup()`, and `mousePressed()`) that are called automatically. 
+
+`keyPressed()` is runs automatically when a key is pressed. We can use this function with conditional statements to add interactivity to our sketches:
 
 ```javascript
 function keyPressed() {
-    if ()
+    // for arrow keys
+    if (keyCode === LEFT_ARROW) {
+        console.log("left arrow pressed");
+    } else if (keyCode === RIGHT_ARROW) {
+        console.log("right arrow pressed");
+    }
+    else if (key === 'a') {
+        console.log("a key pressed");
+    }
 }
 ```
 
 ## Resources
 * [3.1: Introduction to Conditional Statements ](https://www.youtube.com/watch?v=1Osb_iGDdjk&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=14) (Daniel Shiffman)
 * [3.3: Else and Else if, AND and OR](https://www.youtube.com/watch?v=r2S7j54I68c&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=16)
+* [3.4: Boolean Variables](https://www.youtube.com/watch?v=Rk-_syQluvc&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=17)
