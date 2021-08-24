@@ -1,8 +1,18 @@
 # 3. Functions
 
-A **function** is a block of code that performs a task or calculates a value. This block of code is referred to by a name (e.g. background()). Functions are important in computer science for:
+  - [Abstraction (why functions?)](#abstraction-why-functions)
+  - [Declaring & Calling functions](#declaring--calling-functions)
+  - [Function Arguments & Parameters](#function-arguments--parameters)
+  - [Returning Values](#returning-values)
+    - [random()](#random)
+    - [map()](#map)
+    - [other predefined return functions](#other-predefined-return-functions)
+  - [Resources](#resources)
 
-## Why Functions?
+---
+
+## Abstraction (why functions?)
+A **function** is a block of code that performs a task or calculates a value. This block of code is referred to by a name (e.g. background()). Functions are important in computer science for:
 
 **Abstraction** in computer science is the process of organizing complex code into discrete, simple units. Writing functions is one example of abstraction at play: by grouping lines of code under the heading of a function name, we reduce the complexity of our program and make it easier to understand.
 
@@ -107,11 +117,6 @@ function sayHello(firstName, lastName) {
 So far we've only looked at functions that execute code, but they do not *return* or resolve into values. Now we're going to look at functions that do a calculation and return a value. We can use the keyword `return` to specify that functions should store a value in memory after they are called. Returning values is useful if you'd like a function to perform a calculation and use that calculation in your code.
 
 ```javascript
-function setup() {
-  console.log(getCircleArea(3));
-  console.log(getCircleArea(5));
-}
-
 function getCircleArea(r) {
     return r * r * Math.PI;
 }
@@ -154,9 +159,15 @@ map(value, start1, stop1, start2, stop2);
 
 Let's see an example to make sense of what `map()` accomplishes. Let's say we want to program a `pieChart()` function that takes a percentage (represented as a decimal from 0-1) and displays a piechart.
 
-We will use:
+In the piechart example, `map()` maps an input range (0-1) and converts the percent to an output range: radians of an arc (0-2PI). 
+
+```javascript
+// value, start1, stop1, start2, end2
+let rad = map(percent, 0, 1, 0, 2*PI);
+```
+
+We will also need:
 * `arc()` (parameters x, y, w, h, starting radians, ending radians)
-* `map()`
 * `round()` (another predefined p5.js function that returns a rounded number)
 
 ```javascript
@@ -190,7 +201,14 @@ function pieChart(x, y, diameter, percent) {
 ```
 ![pieCharts](assets/piecharts.png)
 
-In the piechart example, `map()` maps an input range (0-1) and converts the percent to an output range: radians of an arc (0-2PI). 
+### other predefined return functions
+Check the [p5.js reference](https://p5js.org/reference/) to familiarize yourself with the other functions that return values:
+* `pow()` (exponent)
+* `sqrt()` 
+* `dist()` (distance)
+* `sin()`, `cos()` and other trig functions
+* `constrain()`, `ceil()`, `floor()`, `round()` (to limit values)
+* `lerpColor()` (interpolate between 2 colors)
 
 ## Resources
 * [2.4: random() Function](https://www.youtube.com/watch?v=POn4cZ0jL-o&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=11) (Daniel Shiffman)
