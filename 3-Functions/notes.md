@@ -7,6 +7,7 @@
     - [random()](#random)
     - [map()](#map)
     - [other predefined return functions](#other-predefined-return-functions)
+    - [define functions that return values](#define-functions-that-return-values)
   - [Resources](#resources)
 
 ---
@@ -46,16 +47,8 @@ So far we have seen many functions, such as:
 * `setup()`
 * `draw()`
 
-To create our own functions, we must first declare them (outside of the `setup()` or `draw()`):
+To create our own functions, we must first **declare** them (outside of the `setup()` or `draw()`):
 ```javascript
-function setup() {
-    createCanvas(400, 400);
-}
-
-function draw() {
-    background(200);
-}
-
 function helloWorld() {
     console.log("my first function");
 }
@@ -114,13 +107,7 @@ function sayHello(firstName, lastName) {
 
 
 ## Returning Values
-So far we've only looked at functions that execute code, but they do not *return* or resolve into values. Now we're going to look at functions that do a calculation and return a value. We can use the keyword `return` to specify that functions should store a value in memory after they are called. Returning values is useful if you'd like a function to perform a calculation and use that calculation in your code.
-
-```javascript
-function getCircleArea(r) {
-    return r * r * Math.PI;
-}
-```
+While some functions merely complete a task, display a value, or print to the console, other functions can perform a calculation and **return** a value. 
 
 ### random()
 There are certain *predefined* functions within p5.js that return values. When called, `random()` will return a floating-point number (a number with a decimal).
@@ -131,7 +118,7 @@ let b = random(10);     // returns a number from 0 (inclusive) to 10 (exclusive)
 let c = random(2, 4);   // returns a number from 2 (inclusive) to 4 (exclusive)
 ```
 
-Let's use `random()` in an example:
+Let's use `random()` in an example to randomly draw random colored ellipses all over the canvas:
 
 ```javascript
 function setup() {
@@ -140,9 +127,11 @@ function setup() {
 }
 
 function draw() {
+    // set x and y to a random location on the canvas
     let x = random(width);
     let y = random(height);
 
+    // randomized red, green, and blue values
     fill(random(255), random(255), random(255));
     ellipse(x, y, 50);
 }
@@ -201,14 +190,71 @@ function pieChart(x, y, diameter, percent) {
 ```
 ![pieCharts](assets/piecharts.png)
 
-### other predefined return functions
-Check the [p5.js reference](https://p5js.org/reference/) to familiarize yourself with the other functions that return values:
+### Other predefined return functions
+Check the [p5.js reference](https://p5js.org/reference/) to familiarize yourself with some other functions that return values:
+* `mills()` (number of milliseconds passed since program began)
 * `pow()` (exponent)
 * `sqrt()` 
-* `dist()` (distance)
+* `dist()` (distance between two points)
 * `sin()`, `cos()` and other trig functions
 * `constrain()`, `ceil()`, `floor()`, `round()` (to limit values)
+
+Color functions such as:
 * `lerpColor()` (interpolate between 2 colors)
+* `color()` (returns a color object)
+
+Other functions defined by JavaScript that return values:
+* `prompt()` (gets user input)
+* `parseInt()` (converts a string to an integer)
+* `parseFloat()` (converts a string to a decimal number)
+
+
+### Define functions that return values
+We can use the keyword `return` to specify that functions should store a value in memory after they are called. 
+
+```javascript
+function getCircumference(radius) {
+    return 2*PI*radius;
+}
+```
+
+We can subsequently store the value returned by the `getCircumference()` function in a variable:
+
+```javascript
+function setup() {
+    let c = getCircumference(10);
+    console.log(c);
+}
+
+function getCircumference(radius) {
+    return 2*PI*radius;
+}
+```
+
+As a perhaps more exciting example, let's say we want to write a function, `getTempColor()` that converts temperature in Celsius (in a range from 0 to 40 degrees C) to a color on a gradient scale from blue to red. Examine all of the functions in the example below that return values: 
+
+
+```javascript
+function setup() {
+    createCanvas(400, 400);
+
+    let celsiusString = prompt("Please enter temperature in celsius");
+    let celsius = parseFloat(celsiusString); // turn the string to a float
+    background(getColorFromTemp(celsius));
+}
+
+function getColorFromTemp(celsius) {
+    // constrain the temperature to the range 0-40
+    celsius = constrain(celsius, 0, 40);
+    // map the temperature range to a number from 0-1
+    let percent = map(celsius, 0, 40, 0, 1);
+    // define red and blue colors
+    let r = color(255, 0, 0);
+    let b = color(0, 0, 255);
+    // use lerpColor() to return a color interpolated between red and blue
+    return lerpColor(b, r, percent);
+}
+```
 
 ## Resources
 * [2.4: random() Function](https://www.youtube.com/watch?v=POn4cZ0jL-o&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=11) (Daniel Shiffman)
